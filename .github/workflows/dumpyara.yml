@@ -11,7 +11,7 @@ defaults:
     shell: bash
 
 env:
-  ROM_URL: https://ghostmirror.hitesh920.workers.dev/0://Samfw.com_SM-A125F_INS_A125FXXU1BUE4_fac.zip
+  ROM_URL: https://bigota.d.miui.com/V12.5.2.0.RKUINXM/miui_SELENEINGlobal_V12.5.2.0.RKUINXM_7ab4e553dc_11.0.zip
 
 jobs:
   build:
