@@ -11,7 +11,7 @@ defaults:
     shell: bash
 
 env:
-  ROM_URL: https://bigota.d.miui.com/V11.0.28.0.QDIMIXM/jasmine_global_images_V11.0.28.0.QDIMIXM_20210702.0000.00_10.0_d88fa668a6.tgz
+  ROM_URL: https://manikantaraavi.raavimanikanta6595.workers.dev/0:/NordOxygen_14.O.22_OTA_0220_all_2108131852_6be5d927ec7.zip
 
 jobs:
   build:
