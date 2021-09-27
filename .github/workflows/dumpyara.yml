@@ -11,7 +11,7 @@ defaults:
     shell: bash
 
 env:
-  ROM_URL: https://bigota.d.miui.com/V12.5.8.0.RKFINXM/sweetin_in_global_images_V12.5.8.0.RKFINXM_20210812.0000.00_11.0_in_1b03040b6e.tgz
+  ROM_URL: https://sourceforge.net/projects/sushrut1101/files/STOCK_ROMs/Samsung/SM-M015G/SM-M015G_INS_M015GXXU3BUH1_fac.zip/download
 
 jobs:
   build:
