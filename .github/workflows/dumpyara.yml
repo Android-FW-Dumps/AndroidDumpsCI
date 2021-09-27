@@ -11,7 +11,7 @@ defaults:
     shell: bash
 
 env:
-  ROM_URL: https://manikantaraavi.raavimanikanta6595.workers.dev/0:/NordOxygen_14.O.22_OTA_0220_all_2108131852_6be5d927ec7.zip
+  ROM_URL: https://bigota.d.miui.com/V12.5.8.0.RKFINXM/sweetin_in_global_images_V12.5.8.0.RKFINXM_20210812.0000.00_11.0_in_1b03040b6e.tgz
 
 jobs:
   build:
