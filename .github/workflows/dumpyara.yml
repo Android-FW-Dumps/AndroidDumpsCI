@@ -11,7 +11,7 @@ defaults:
     shell: bash
 
 env:
-  ROM_URL: https://sourceforge.net/projects/sushrut1101/files/STOCK_ROMs/Samsung/SM-M015G/SM-M015G_INS_M015GXXU3BUH1_fac.zip/download
+  ROM_URL: https://transfer.sh/get/Czm5Gh/image-taimen-rp1a.201005.004.a1.zip
 
 jobs:
   build:
