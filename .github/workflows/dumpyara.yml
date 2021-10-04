@@ -11,7 +11,7 @@ defaults:
     shell: bash
 
 env:
-  ROM_URL: https://bigota.d.miui.com/V12.5.3.0.QFGCNXM/lavender_images_V12.5.3.0.QFGCNXM_20210702.0000.00_10.0_cn_4410ce2c07.tgz
+  ROM_URL: https://bigota.d.miui.com/21.9.29/miui_HAYDN_21.9.29_2ed8826b69_12.0.zip
 
 jobs:
   build:
