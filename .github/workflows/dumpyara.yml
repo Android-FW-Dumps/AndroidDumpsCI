@@ -11,7 +11,7 @@ defaults:
     shell: bash
 
 env:
-  ROM_URL: https://bigota.d.miui.com/21.9.29/miui_HAYDN_21.9.29_2ed8826b69_12.0.zip
+  ROM_URL: https://bigota.d.miui.com/V12.0.3.0.QCMINXM/pine_in_global_images_V12.0.3.0.QCMINXM_20210524.0000.00_10.0_in_94285a27cd.tgz
 
 jobs:
   build:
