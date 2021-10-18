@@ -11,7 +11,7 @@ defaults:
     shell: bash
 
 env:
-  ROM_URL: https://bigota.d.miui.com/V12.0.3.0.QCMINXM/pine_in_global_images_V12.0.3.0.QCMINXM_20210524.0000.00_10.0_in_94285a27cd.tgz
+  ROM_URL: https://bigota.d.miui.com/V12.5.1.0.QCQINXM/olivewood_in_global_images_V12.5.1.0.QCQINXM_20210723.0000.00_10.0_in_d366e7732f.tgz
 
 jobs:
   build:
