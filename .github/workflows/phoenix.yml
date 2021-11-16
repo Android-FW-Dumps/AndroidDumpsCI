@@ -12,7 +12,7 @@ defaults:
     shell: bash
 
 env:
-  ROM_URL: # Enter ROM URL Here
+  ROM_URL: http://www.mediafire.com/file/gwcdv9bqp92g1n5/Infinix_S5_Pro_X660C_MT6765_V406_210315.zip/file
 
 jobs:
   build:
