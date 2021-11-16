@@ -12,7 +12,7 @@ defaults:
     shell: bash
 
 env:
-  ROM_URL: https://bigota.d.miui.com/V12.0.20.0.QJQCNXM/lime_images_V12.0.20.0.QJQCNXM_20210902.0000.00_10.0_cn_9b3338f50d.tgz
+  ROM_URL: https://bigota.d.miui.com/V12.0.16.0.QCRMIXM/angelica_global_images_V12.0.16.0.QCRMIXM_20210806.0000.00_10.0_global_8397ab12c3.tgz
 
 jobs:
   build:
