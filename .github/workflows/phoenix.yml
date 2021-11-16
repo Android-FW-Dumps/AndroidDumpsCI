@@ -1,0 +1,46 @@
+name: Phoenix Firmware Dumper
+ 
+on:
+  push:
+    paths-ignore:
+      - '*.md'
+    branches: [ main ]
+
+defaults:
+  run:
+    shell: bash
+
+env:
+  ROM_URL: # Enter ROM URL Here
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+       - name: Checkouts
+         uses: actions/checkout@v2
+
+       - name: Clone Phoenix Firmware Dumper
+         run: |
+              git clone https://github.com/DroidDumps/phoenix_firmware_dumper.git
+
+       - name: Setup Phoenix Dumper environment
+         working-directory: phoenix_firmware_dumper
+         run: |
+              sudo bash setup.sh
+              git config --global user.name "Sushrut1101"
+              git config --global user.email "guptasushrut@gmail.com"
+
+       - name: Setup Config envs
+         working-directory: phoenix_firmware_dumper
+         run: |
+              echo "${{ secrets.GIT_TOKEN }}" > .github_token
+              echo "${{ secrets.GIT_ORG_NAME }}" > .github_orgname
+              echo "${{ secrets.BOT_TOKEN }}" > .tg_token
+              echo "${{ secrets.CHAT_ID }}" > .tg_chat
+
+       - name: Start Dumping
+         working-directory: phoenix_firmware_dumper
+         run: |
+              ./dumper.sh "$ROM_URL"
