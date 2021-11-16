@@ -5,6 +5,7 @@ on:
     paths-ignore:
       - '*.md'
     branches: [ main ]
+  workflow_dispatch:
 
 defaults:
   run:
