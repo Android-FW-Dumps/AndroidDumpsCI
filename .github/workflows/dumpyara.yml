@@ -12,7 +12,7 @@ defaults:
     shell: bash
 
 env:
-  ROM_URL: https://bigota.d.miui.com/V12.0.16.0.QCRMIXM/angelica_global_images_V12.0.16.0.QCRMIXM_20210806.0000.00_10.0_global_8397ab12c3.tgz
+  ROM_URL: http://www.mediafire.com/file/gwcdv9bqp92g1n5/Infinix_S5_Pro_X660C_MT6765_V406_210315.zip/file
 
 jobs:
   build:
