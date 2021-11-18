@@ -12,7 +12,7 @@ defaults:
     shell: bash
 
 env:
-  ROM_URL: http://www.mediafire.com/file/gwcdv9bqp92g1n5/Infinix_S5_Pro_X660C_MT6765_V406_210315.zip/file
+  ROM_URL: https://asia-sysupwsdl.vivoglobal.com/upgrade/official/officialFiles/PD2036F_EX_A_6.11.0-update-full_1636447895.zip
 
 jobs:
   build:
