@@ -12,7 +12,7 @@ defaults:
     shell: bash
 
 env:
-  ROM_URL: https://bigota.d.miui.com/V12.0.18.0.QCDINXM/dandelion_in_global_images_V12.0.18.0.QCDINXM_20210806.0000.00_10.0_in_03888d2994.tgz
+  ROM_URL: https://index.aospbuilding.workers.dev/0:/Neffos_Y7_MT6750_03192019_8.1.0.zip
 
 jobs:
   build:
