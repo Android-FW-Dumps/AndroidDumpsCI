@@ -12,7 +12,7 @@ defaults:
     shell: bash
 
 env:
-  ROM_URL: https://withered-wind-7524.marvelmathesh.workers.dev/0:/GdriveXbot/lineage-15.1-20190502-UNOFFICIAL-kanas-SandroidTeam-Ih24n.zip
+  ROM_URL: https://index.aospbuilding.workers.dev/0:/AP_G355HXXS0AQA1_CL9485701_QB12130811_REV04_user_low_ship.zip/
 
 jobs:
   build:
