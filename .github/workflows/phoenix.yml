@@ -12,7 +12,7 @@ defaults:
     shell: bash
 
 env:
-  ROM_URL: https://sg.samfwcloud.ml/v2/IxJCDiMnLiEDLAg5EjspIC4kIhQDNh4lFzssIDs2ByAzMUEgOzEUQDMQMCMBOyw/FzgvDTwsIjkjL0E8AzseOjMIITkeAEE7CRchMA8lMzsDMT4ELycpBxIDLAk7NgYxMhEfOB4lLBw1Ox8wPC8COCEXHj0NJR4rLwcCBzsnIREeFy4KIScfOzxABkIjCyI/Iws8MQEWCDAeCw0xCREHOTQbIyshAD4OIQAGLC44Hiw0ER4OMiUzLDIlDSs8AD4fJhsGOg8HCkA8AywnCRc+Di8LBxAzBy4RDxYpKTwkHjUeBylCJgceKTIXIUAJER4OMi8+AwMSMBsjJDswEgc+QQMsHiYzJCMwHjspPBcHIzkNLwcgIy8+ETwXIysPESw5JhsGHA8DLxIBOy8OARcuIQEXAiAyLz42PAsHDg07Aj8zLy8xMjgzNTsWLD0DCwdCJhYIACMkFR0jFhUGARYjEw==
+  ROM_URL: https://drive.google.com/file/d/1Eg0LbQXQ2WIYL8v9b6c1XK1OZ_RaY_YS/view?usp=sharing
 jobs:
   build:
     runs-on: ubuntu-latest
