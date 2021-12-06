@@ -12,7 +12,7 @@ defaults:
     shell: bash
 
 env:
-  ROM_URL: https://index.aospbuilding.workers.dev/0:/EvolutionX_4.6_a3y17lte-10.0-20200824-0508-UNOFFICIAL.zip
+  ROM_URL: https://sg.samfwcloud.ml/v2/IxJCDiMnLiEDLAg5EjspIC4kIhQDNh4lFzssIDs2ByAzMUEgOzEUQDMQMCMBOyw/FzgvDTwsIjkjL0E8AzseOjMIITkeAEE7CRchMA8lMzsDMT4ELycpBxIDLAk7NgYxMhEfOB4lLBw1Ox8wPC8COCEXHj0NJR4rLwcCBzsnIREeFy4KIScfOzxABkIjCyI/Iws8MQEWCDAeCw0xCREHOTQbIyshAD4OIQAGLC44Hiw0ER4OMiUzLDIlDSs8AD4fJhsGOg8HCkA8AywnCRc+Di8LBxAzBy4RDxYpKTwkHjUeBylCJgceKTIXIUAJER4OMi8+AwMSMBsjJDswEgc+QQMsHiYzJCMwHjspPBcHIzkNLwcgIy8+ETwXIysPESw5JhsGHA8DLxIBOy8OARcuIQEXAiAyLz42PAsHDg07Aj8zLy8xMjgzNTsWLD0DCwdCJhYIACMkFR0jFhUGARYjEw==
 jobs:
   build:
     runs-on: ubuntu-latest
