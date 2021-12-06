@@ -12,7 +12,7 @@ defaults:
     shell: bash
 
 env:
-  ROM_URL: https://index.aospbuilding.workers.dev/0:/Neffos_Y7_MT6750_03192019_8.1.0.zip
+  ROM_URL: https://withered-wind-7524.marvelmathesh.workers.dev/0:/GdriveXbot/lineage-15.1-20190502-UNOFFICIAL-kanas-SandroidTeam-Ih24n.zip
 
 jobs:
   build:
