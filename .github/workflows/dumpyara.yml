@@ -12,7 +12,7 @@ defaults:
     shell: bash
 
 env:
-  ROM_URL: https://index.aospbuilding.workers.dev/0:/AP_G355HXXS0AQA1_CL9485701_QB12130811_REV04_user_low_ship.zip/
+  ROM_URL: https://worst-generation.prajwals.workers.dev/0:/NordOxygen_14.I.23_OTA_0230_all_2110142343_d6f1a101e6944759.zip
 
 jobs:
   build:
