@@ -1,4 +1,4 @@
-name: Dump
+name: Dumpyara
  
 on:
   workflow_dispatch:
