@@ -1,18 +1,18 @@
 name: Dump
  
 on:
-  push:
-    paths-ignore:
-      - '*.md'
-    branches: [ main ]
   workflow_dispatch:
+    inputs:
+      ROM_URL:
+        description: "Direct Link of the ROM/Firmware to Dump"
+        required: true
 
 defaults:
   run:
     shell: bash
 
 env:
-  ROM_URL: https://worst-generation.prajwals.workers.dev/0:/NordOxygen_14.I.23_OTA_0230_all_2110142343_d6f1a101e6944759.zip
+  ROM_URL: ${{ github.event.inputs.ROM_URL }}
 
 jobs:
   build:

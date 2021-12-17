@@ -1,18 +1,19 @@
 name: Phoenix Firmware Dumper
  
 on:
-  push:
-    paths-ignore:
-      - '*.md'
-    branches: [ main ]
   workflow_dispatch:
+    inputs:
+      ROM_URL:
+        description: "Direct Link of the ROM/Firmware to Dump"
+        required: true
 
 defaults:
   run:
     shell: bash
 
 env:
-  ROM_URL: https://drive.google.com/file/d/1Eg0LbQXQ2WIYL8v9b6c1XK1OZ_RaY_YS/view?usp=sharing
+  ROM_URL: ${{ github.event.inputs.ROM_URL }}
+
 jobs:
   build:
     runs-on: ubuntu-latest
