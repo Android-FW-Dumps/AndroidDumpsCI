@@ -6,6 +6,8 @@ on:
       ROM_URL:
         description: "Direct Link of the ROM/Firmware to Dump"
         required: true
+      EXTRA_CMD:
+        description: "Any Extra Command to Run Before Dump"
 
 defaults:
   run:
@@ -13,6 +15,7 @@ defaults:
 
 env:
   ROM_URL: ${{ github.event.inputs.ROM_URL }}
+  EXTRA_CMD: ${{ github.event.inputs.EXTRA_CMD }}
 
 jobs:
   build:
@@ -40,6 +43,11 @@ jobs:
               echo "${{ secrets.GIT_ORG_NAME }}" > .github_orgname
               echo "${{ secrets.BOT_TOKEN }}" > .tg_token
               echo "${{ secrets.CHAT_ID }}" > .tg_chat
+
+       - name: Run the Extra Command
+         working-directory: phoenix_firmware_dumper
+         run: |
+              $EXTRA_CMD
 
        - name: Start Dumping
          working-directory: phoenix_firmware_dumper
