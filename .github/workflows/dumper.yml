@@ -1,4 +1,4 @@
-name: Phoenix Firmware Dumper
+name: Firmware Dumper
  
 on:
   workflow_dispatch:
@@ -15,7 +15,13 @@ defaults:
     shell: bash
 
 env:
+  # ROM
   ROM_URL: ${{ github.event.inputs.ROM_URL }}
+
+  # Gitlab
+  PUSH_TO_GITLAB: true
+
+  # Extra Command
   EXTRA_CMD: ${{ github.event.inputs.EXTRA_CMD }}
 
 jobs:
@@ -26,31 +32,33 @@ jobs:
        - name: Checkouts
          uses: actions/checkout@v2
 
-       - name: Clone Phoenix Firmware Dumper
+       - name: Clone Our Firmware Dumper
          run: |
-              git clone https://github.com/DroidDumps/phoenix_firmware_dumper.git
+              git clone https://github.com/Android-FW-Dumps/dumper.git
 
-       - name: Setup Phoenix Dumper environment
-         working-directory: phoenix_firmware_dumper
+       - name: Setup Our Firmware Dumper's environment
+         working-directory: dumper
          run: |
               sudo bash setup.sh
               git config --global user.name "Sushrut1101"
               git config --global user.email "guptasushrut@gmail.com"
 
        - name: Setup Config envs
-         working-directory: phoenix_firmware_dumper
+         working-directory: dumper
          run: |
-              echo "${{ secrets.GIT_TOKEN }}" > .github_token
-              echo "${{ secrets.GIT_ORG_NAME }}" > .github_orgname
+              # echo "${{ secrets.GIT_TOKEN }}" > .github_token
+              # echo "${{ secrets.GIT_ORG_NAME }}" > .github_orgname
+              echo "${{ secrets.GITLAB_TOKEN }}" > .gitlab_token
+              echo "${{ secrets.GITLAB_GROUP }}" > .gitlab_group
               echo "${{ secrets.BOT_TOKEN }}" > .tg_token
               echo "${{ secrets.CHAT_ID }}" > .tg_chat
 
        - name: Run the Extra Command
-         working-directory: phoenix_firmware_dumper
+         working-directory: dumper
          run: |
               $EXTRA_CMD
 
        - name: Start Dumping
-         working-directory: phoenix_firmware_dumper
+         working-directory: dumper
          run: |
               ./dumper.sh "$ROM_URL"
