@@ -8,6 +8,7 @@ on:
         required: true
       EXTRA_CMD:
         description: "Any Extra Command to Run Before Dump"
+        required: false
 
 defaults:
   run:
