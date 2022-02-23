@@ -41,6 +41,8 @@ jobs:
          run: |
               sudo bash setup.sh
               mkdir -p ~/.ssh
+              ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
+              ssh-keyscan -t rsa gitlab.com >> ~/.ssh/known_hosts
               git config --global user.name "Sushrut1101"
               git config --global user.email "guptasushrut@gmail.com"
 
@@ -54,6 +56,7 @@ jobs:
               echo "${{ secrets.PRIV_SSH_KEY }}" > ~/.ssh/id_rsa  # Only for Gitlab
               echo "${{ secrets.BOT_TOKEN }}" > .tg_token
               echo "${{ secrets.CHAT_ID }}" > .tg_chat
+              chmod 600 ~/.ssh/id_rsa
 
        - name: Run the Extra Command
          working-directory: dumper
