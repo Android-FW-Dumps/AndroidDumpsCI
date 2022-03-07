@@ -1,4 +1,4 @@
-name: Firmware Dumper
+name: DumprX
  
 on:
   workflow_dispatch:
@@ -34,10 +34,10 @@ jobs:
 
        - name: Clone Our Firmware Dumper
          run: |
-              git clone https://github.com/Android-FW-Dumps/dumper.git
+              git clone https://github.com/Android-FW-Dumps/DumprX.git DumprX
 
-       - name: Setup Our Firmware Dumper's environment
-         working-directory: dumper
+       - name: Setup DumprX's Environment
+         working-directory: DumprX
          run: |
               sudo bash setup.sh
               mkdir -p ~/.ssh
@@ -47,7 +47,7 @@ jobs:
               git config --global user.email "guptasushrut@gmail.com"
 
        - name: Setup Config envs
-         working-directory: dumper
+         working-directory: DumprX
          run: |
               # echo "${{ secrets.GIT_TOKEN }}" > .github_token
               # echo "${{ secrets.GIT_ORG_NAME }}" > .github_orgname
@@ -59,11 +59,11 @@ jobs:
               chmod 600 ~/.ssh/id_rsa
 
        - name: Run the Extra Command
-         working-directory: dumper
+         working-directory: DumprX
          run: |
               $EXTRA_CMD
 
        - name: Start Dumping
-         working-directory: dumper
+         working-directory: DumprX
          run: |
               ./dumper.sh "$ROM_URL"
