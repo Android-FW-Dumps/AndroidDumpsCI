@@ -39,6 +39,7 @@ jobs:
        - name: Setup DumprX's Environment
          working-directory: DumprX
          run: |
+              neofetch || uname -r
               sudo bash setup.sh
               mkdir -p ~/.ssh
               ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
