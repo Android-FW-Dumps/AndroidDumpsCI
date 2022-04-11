@@ -1,0 +1,72 @@
+name: DumprX Dev
+ 
+on:
+  workflow_dispatch:
+    inputs:
+      ROM_URL:
+        description: "Direct Link of the ROM/Firmware to Dump"
+        required: true
+      EXTRA_CMD:
+        description: "Any Extra Command to Run Before Dump"
+        required: false
+
+defaults:
+  run:
+    shell: bash
+
+env:
+  # ROM
+  ROM_URL: ${{ github.event.inputs.ROM_URL }}
+
+  # Gitlab
+  PUSH_TO_GITLAB: true
+
+  # Extra Command
+  EXTRA_CMD: ${{ github.event.inputs.EXTRA_CMD }}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+       - name: Checkouts
+         uses: actions/checkout@v2
+
+       - name: Clone Our Firmware Dumper
+         run: |
+              git config --global credential.helper store
+              echo "${{ secrets.GIT_TOKEN }}" >> ~/.git-credentials
+              git clone https://github.com/Android-FW-Dumps/DumprX.git DumprX
+
+       - name: Setup DumprX's Environment
+         working-directory: DumprX
+         run: |
+              neofetch || uname -r
+              sudo bash setup.sh
+              mkdir -p ~/.ssh
+              ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
+              ssh-keyscan -t rsa gitlab.com >> ~/.ssh/known_hosts
+              git config --global user.name "Sushrut1101"
+              git config --global user.email "guptasushrut@gmail.com"
+
+       - name: Setup Config envs
+         working-directory: DumprX
+         run: |
+              # echo "${{ secrets.GIT_TOKEN }}" > .github_token
+              # echo "${{ secrets.GIT_ORG_NAME }}" > .github_orgname
+              echo "${{ secrets.GITLAB_TOKEN }}" > .gitlab_token  # Only for Gitlab
+              echo "${{ secrets.GITLAB_GROUP }}" > .gitlab_group  # Only for Gitlab
+              echo "${{ secrets.PRIV_SSH_KEY }}" > ~/.ssh/id_rsa  # Only for Gitlab
+              echo "${{ secrets.BOT_TOKEN }}" > .tg_token
+              echo "${{ secrets.CHAT_ID }}" > .tg_chat
+              chmod 600 ~/.ssh/id_rsa
+
+       - name: Run the Extra Command
+         working-directory: DumprX
+         run: |
+              $EXTRA_CMD
+
+       - name: Start Dumping
+         working-directory: DumprX
+         run: |
+              ./dumper.sh "$ROM_URL"
