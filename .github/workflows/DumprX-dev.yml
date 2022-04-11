@@ -35,8 +35,9 @@ jobs:
        - name: Clone Our Firmware Dumper
          run: |
               git config --global credential.helper store
-              echo "${{ secrets.GIT_TOKEN }}" >> ~/.git-credentials
-              git clone https://github.com/Android-FW-Dumps/DumprX.git DumprX
+              export GITHUB_TOKEN="${{ secrets.GIT_TOKEN }}"
+              echo https://Sushrut1101:"${GITHUB_TOKEN}"@github.com >> ~/.git-credentials
+              git clone https://github.com/DumprX/DumprX-Dev.git DumprX
 
        - name: Setup DumprX's Environment
          working-directory: DumprX
