@@ -53,4 +53,4 @@ jobs:
        - name: Running Dumpyara
          working-directory: dumpyara
          run: |
-              ./dump.sh "$ROM_URL"
+              ./dumpyara.sh "$ROM_URL"
