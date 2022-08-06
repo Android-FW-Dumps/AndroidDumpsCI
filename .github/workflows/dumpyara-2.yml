@@ -53,4 +53,4 @@ jobs:
        - name: Running Dumpyara
          working-directory: firmware_dumper
          run: |
-              ./dumpyara.sh "$ROM_URL"
+              ./dump.sh $ROM_URL
