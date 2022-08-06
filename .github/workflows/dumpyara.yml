@@ -31,14 +31,14 @@ jobs:
               git clone https://github.com/AndroidDumps/dumpyara.git
 
        - name: Setup Dumpyara environment
-         working-directory: firmware_dumper
+         working-directory: dumpyara
          run: |
               sudo bash setup.sh
               git config --global user.name "Sushrut1101"
               git config --global user.email "guptasushrut@gmail.com"
 
        - name: Setup config envs
-         working-directory: firmware_dumper
+         working-directory: dumpyara
          run: |
               echo "${{ secrets.GIT_TOKEN }}" > .github_token
               echo "${{ secrets.GIT_ORG_NAME }}" > .github_orgname
@@ -46,11 +46,11 @@ jobs:
               echo "${{ secrets.CHAT_ID }}" > .tg_chat
 
        - name: Run the Extra Command
-         working-directory: firmware_dumper
+         working-directory: dumpyara
          run: |
               $EXTRA_CMD
 
        - name: Running Dumpyara
-         working-directory: firmware_dumper
+         working-directory: dumpyara
          run: |
               ./dump.sh "$ROM_URL"
