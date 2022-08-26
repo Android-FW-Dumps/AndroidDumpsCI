@@ -34,7 +34,7 @@ jobs:
 
        - name: Clone Our Firmware Dumper
          run: |
-              git clone https://github.com/Android-FW-Dumps/DumprX.git DumprX
+              git clone https://github.com/DumprX/DumprX.git DumprX
 
        - name: Setup DumprX's Environment
          working-directory: DumprX
