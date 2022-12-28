@@ -67,4 +67,4 @@ jobs:
        - name: Start Dumping
          working-directory: DumprX
          run: |
-              ./dumper.sh "$ROM_URL"
+              sudo ./dumper.sh "$ROM_URL"
