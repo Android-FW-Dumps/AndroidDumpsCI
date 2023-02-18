@@ -39,7 +39,7 @@ jobs:
        - name: Setup DumprX's Environment
          working-directory: DumprX
          run: |
-              neofetch || uname -r
+
               sudo bash setup.sh
               sudo apt install -y f2fs-tools
               mkdir -p ~/.ssh
@@ -68,4 +68,4 @@ jobs:
        - name: Start Dumping
          working-directory: DumprX
          run: |
-              sudo ./dumper.sh "$ROM_URL"
+              ./dumper.sh "$ROM_URL"
